@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+    - name: install mc
+      apt: name=mc update_cache=yes state=latest
+
+    - name: tune mc to exit in current folder
+      lineinfile: dest=/root/.profile line=". /usr/share/mc/bin/mc.sh" state=present insertafter=EOF

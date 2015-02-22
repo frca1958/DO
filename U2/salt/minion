@@ -1,0 +1,9 @@
+#master: localhost
+
+file_client: local
+
+id: U0
+
+file_roots:
+  base:
+    - /srv/salt
