@@ -1,0 +1,6 @@
+#cloud-config
+
+runcmd:
+  - sed -i '/^Port 22/a Port 443' /etc/ssh/sshd_config
+  - service ssh restart
+  - timedatectl set-timezone Europe/Brussels
